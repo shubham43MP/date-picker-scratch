@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Vite + React-TS date picker app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ This project is a real-time date picker application built with React and TypeScript. The app utilizes Vite as the build tool and provides a dynamic interface for selecting date ranges, making it engaging and interactive.
 
-Currently, two official plugins are available:
+## Features
+- Date range selection: Users can select date ranges using a calendar interface, with the ability to choose predefined ranges such as "Last 7 Days" and "Last 30 Days".
+- Dynamic Display of Weekends: The application identifies and displays weekends within the selected date range.
+- Notifications: Provides alerts whenever a date range is selected, along with details of weekends included in that range.
+- Responsive UI: The user interface is designed to be responsive, ensuring compatibility across devices and screen sizes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Install Dependecies
+```
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Start the dev server
 ```
+ npm run dev
+```
+ The application will be available at `http://localhost:5173`
+
+## Project Structure
+- /components: Contains reusable React components, including the main DatePicker component for selecting date ranges.
+- /utils: Utility functions for rendering the calendar and formatting dates.
+- /hooks: Custom hooks for managing state and logic for the date picker.
+- /public: Contains static assets like images, icons, and any other public files used in the app.
+
+## Libraries and Tools 
+- React: A JavaScript library for building user interfaces, used here for component-based development.
+- TypeScript: Provides static typing, improving code quality, refactoring, and overall maintainability.
+- Vite: A fast, modern build tool for web projects, offering lightning-fast hot module replacement (HMR).
+
+## Development Environment
+- Node.js: Version 20.17.0 is required to install dependencies and run the project.
+- Vite: Provides a fast development environment and optimized build process.
+- ESLint: Linting tool for maintaining code consistency and avoiding bugs.
+- Operating System: The app has been developed and tested on Ubuntu 23, but it should work on other OSes as well.
+
+## Note
+- This app is intended to demonstrate the front end and does not use an actual back-end. The data is mocked to simulate real-time user additions.
+
+## Actual screenshot of the Output and what to expect at `http://localhost:5173`
+
+![Alt text](public/app_ss.png?raw=true "Title")
